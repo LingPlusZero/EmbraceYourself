@@ -23,7 +23,7 @@ $(function () {
     var OGPList = [
         ['og:type', 'website'],
         ['og:title', '暖暖-' + title],
-        ['og:image', './img/logo_seo.svg'],
+        ['og:image', 'https://lingpluszero.github.io/EmbraceYourself/img/logo_seo.svg'],
         ['og:site_name', '暖暖心理諮商所'],
         ['og:description', description],
         ['og:url', url]
