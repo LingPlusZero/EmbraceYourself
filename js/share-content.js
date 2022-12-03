@@ -9,7 +9,7 @@ $(function () {
         ['og:title', title],
         ['og:description', description],
         ['og:article:author', author],
-        ['og:image', 'https://lingpluszero.github.io/EmbraceYourself/img/logo_seo.svg'],
+        ['og:image', 'https://lingpluszero.github.io/EmbraceYourself/img/logo_seo.jpg'],
         ['og:url', url],
         ['og:site_name', '暖暖心理諮商所']
     ];
