@@ -6,7 +6,7 @@ $(function () {
     const url = location.href;
     var OGPList = [
         ['og:type', 'article'],
-        ['og:title', title],
+        ['og:title', title + "| 暖暖心理諮商所"],
         ['og:description', description],
         ['og:article:author', author],
         ['og:image', 'https://lingpluszero.github.io/EmbraceYourself/img/logo_seo.jpg'],
