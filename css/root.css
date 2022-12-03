@@ -1,0 +1,222 @@
+/* 字型 */
+@font-face {
+    font-family: "gensen-B";
+    src: url('../font/woff/GenSenRoundedTW-B-01.woff')format("woff");
+}
+
+@font-face {
+    font-family: "gensen-L";
+    src: url('../font/woff/GenSenRoundedTW-L-01.woff')format('woff');
+}
+
+@font-face {
+    font-family: "gensen-R";
+    src: url('../font/woff/GenSenRoundedTW-R-01.woff')format('woff');
+}
+
+
+/* 顏色 */
+:root {
+    /* 主色區 */
+    --green-main: #71A691;
+    --green-dark: #4A866E;
+    --green-light: #ADCDC1;
+    --green-pale: #E6F0EC;
+    --cream: #F9F5EC;
+    --white: white;
+    /* 灰階文字區 */
+    --word-80: rgba(0, 0, 0, 0.8);
+    --word-70: rgba(0, 0, 0, 0.7);
+    --word-60: rgba(0, 0, 0, 0.6);
+    --word-50: rgba(0, 0, 0, 0.5);
+    --word-40: rgba(0, 0, 0, 0.4);
+    --word-wh: white;
+    /* 表格 */
+    --form-gray: #BDBDBD;
+    --red: #BF3F3B;
+}
+
+/* 文字樣式 */
+.word-homepage {
+    font-family: "gensen-L";
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 160%;
+    letter-spacing: 0.36em;
+}
+
+.word-h1 {
+    font-family: "gensen-B";
+    font-size: 2rem;
+    line-height: 125%;
+    letter-spacing: 0.05em
+}
+
+.word-h2 {
+    font-family: "gensen-B";
+    font-size: 1.75rem;
+    line-height: 160%;
+    letter-spacing: 0.05em;
+}
+
+.word-h2-type2 {
+    font-family: "gensen-L";
+    font-size: 1.75rem;
+    line-height: 160%;
+    letter-spacing: 0.05em;
+}
+
+.word-h3 {
+    font-family: "gensen-B";
+    font-size: 1.5rem;
+    line-height: 125%;
+    line-height: 150%;
+}
+
+.word-h4 {
+    font-family: "gensen-L";
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 150%;
+}
+
+.word-h4-type2 {
+    font-family: "gensen-R";
+    font-weight: 600px;
+    font-size: 1.25rem;
+    line-height: 150%;
+}
+
+.word-title {
+    font-family: "gensen-L";
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+}
+
+.word-subtitle {
+    font-family: "gensen-L";
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 1rem;
+}
+
+.word-body {
+    font-family: "gensen-L";
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 170%;
+    
+}
+
+.word-small {
+    font-family: "gensen-L";
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.word-button {
+    font-family: "gensen-B";
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 120%;
+}
+
+/* 按鈕樣式 */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    height: auto;
+    font-family: "gensen-L";
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 120%;
+    border-radius: 30px;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+/* 主要樣式 */
+.btn-primary {
+    background: var(--green-main);
+    color: var(--word-wh);
+    padding: 16px 24px 14px;
+    transition: all .4s;
+
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    background: var(--green-dark);
+}
+
+.btn-primary:focus,
+.btn-secondary:focus {
+    box-shadow: 0 0 4px rgba(138, 181, 164, 0.5);
+}
+
+/* 這裡的disabled是class */
+.btn-primary.disabled {
+    background: #BDBDBD;
+}
+
+.btn-primary.disabled:focus,
+.btn-secondary.disabled:focus {
+    box-shadow: none;
+}
+
+/* 次要按鈕 */
+.btn-secondary {
+    background: var(--white);
+    color: var(--green-main);
+    padding: 14px 32px 12px;
+    border: solid 2px var(--green-light);
+    transition: all .4s;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    background: var(--green-light);
+    color: var(--green-dark);
+}
+
+.btn-secondary.disabled {
+    border: solid 2px #BDBDBD;
+    color: #BDBDBD;
+}
+
+.btn-secondary.disabled {
+    background: initial;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-10px);
+}
+
+.btn-primary.disabled:hover,
+.btn-secondary.disabled:hover {
+    transform: none;
+}
+
+
+a[class^='btn-'].left img {
+    float: left;
+    margin-top: 3px;
+    
+}
+
+a[class^='btn-'].right img {
+    float: right;
+    margin-top: 3px;
+}
+
+@media screen and (max-width: 520px) {
+    a[class^='btn-'].right img,
+    a[class^='btn-'].left img {
+        margin-top: 1.1px;
+        
+    }
+}

@@ -1,0 +1,222 @@
+#content h3.add-bar {
+    margin-bottom: 80px;
+}
+
+#content ol,
+#content .payment-table {
+    list-style-position: inside;
+    margin-bottom: 180px;
+}
+
+#content .prosedure ol {
+    display: flex;
+    column-gap: 32px;
+    row-gap: 48px;
+    justify-content: space-between;
+}
+
+#content .prosedure li {
+    width: 100%;
+    text-align: center;
+}
+
+#content .prosedure li h4 {
+    margin-top: 12px;
+}
+
+#content .prosedure .icon {
+    margin: 20px auto;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    background: var(--green-pale);
+}
+
+#content .prosedure p {
+    text-align: left;
+}
+
+#content .notice li:not(.notice li:last-of-type) {
+    margin-bottom: 24px;
+}
+
+#content .payment-table {
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
+    margin: 0 auto 180px;
+    overflow: hidden;
+}
+
+
+#content .payment-table span {
+    display: inline-block;
+}
+
+#content .payment-table .table-row {
+    padding: 24px 48px;
+    overflow: hidden;
+    transition: all .4s;
+}
+
+#content .payment-table .table-title {
+    padding: 12px 48px;
+    overflow: hidden;
+}
+
+.table-row:not(.table-row.table-title):hover {
+    background: var(--green-pale);
+}
+
+.table-row:not(.table-row.table-title):not(.table-row:nth-of-type(2)) {
+    border-top: solid thin rgba(0, 0, 0, 0.1);
+}
+
+.table-row {
+    display: flex;
+    column-gap: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.table-row>div {
+    width: fit-content;
+    display: flex;
+    column-gap: 100px;
+    justify-content: flex-end;
+}
+
+
+.table-row .duration,
+.table-row .regular,
+.table-row .intern {
+    width: 100px;
+}
+
+#content .payment-table .table-title {
+    background: var(--green-main);
+    color: var(--white);
+}
+
+/* 預約頁面按鈕 */
+
+.content-btn {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    column-gap: 14%;
+    /* 動態 */
+    opacity: 0.3;
+}
+
+.content-btn a {
+    flex-basis: 270px;
+}
+
+@media screen and (max-width: 1600px) {
+    #content .prosedure ol {
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto 180px;
+    }
+
+    #content .prosedure ol li {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    .table-row>div {
+        width: 100%;
+        justify-content: space-between;
+        column-gap: 30px;
+    }
+
+    .table-row .duration {
+        text-align: left;
+    }
+}
+
+
+@media screen and (max-width: 990px) {
+    #content .prosedure ol {
+        width: 90%;
+    }
+
+    #content .prosedure ol li {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .table-row {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .table-row>div {
+        width: fit-content;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        column-gap: 30px;
+    }
+    .table-row .duration {
+        align-self: center;
+    }
+
+    .table-row .duration,
+    .table-row .regular,
+    .table-row .intern {
+        width: fit-content;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #content .prosedure ol {
+        width: 100%;
+    }
+
+    #content .payment-table {
+        width: 100%;
+    }
+
+    .content-btn {
+        width: 64%;
+        gap: 10px;
+    }
+
+    .content-btn a {
+        flex-basis: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #content .prosedure ol {
+        flex-direction: column;
+        margin: 0 auto 180px;
+        width: 90%;
+    }
+
+    #content .prosedure ol li {
+        width: 100%;
+    }
+
+    #content .payment-table .table-row{
+        gap: 0;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .content-btn {
+        width: 50%;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .content-btn a {
+        flex-basis: 50px;
+    }
+}

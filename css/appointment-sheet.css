@@ -1,0 +1,426 @@
+#footer {
+    border-top: none;
+}
+
+#content-container {
+    padding: 140px 0 180px;
+    background: var(--green-light);
+}
+
+.content-small {
+    background: var(--white);
+    background-image: url('../img/appointment-sheet-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
+    border-radius: 50px;
+    padding: 80px 5% 230px;
+}
+
+.banner-type3 {
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+.banner-type3 .leaf {
+    top: -35%;
+}
+
+/* 進度條 */
+
+.progress-line {
+    width: 95%;
+    margin: 0 auto 100px;
+    position: relative;
+}
+
+.progress-line>div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+}
+
+.progress-line .step {
+    width: 30%;
+    text-align: center;
+}
+
+/* 當前 */
+.progress-line .step .number {
+    width: 55px;
+    line-height: 55px;
+    margin: auto auto 28px;
+    border-radius: 30px;
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+/* 完成 */
+.progress-line .step .number.finished {
+    background: var(--green-light);
+}
+
+/* 未完成 */
+.progress-line .step .number.unfinished {
+    background: var(--form-gray);
+}
+
+/* 進度條底 */
+.progress-line .line-bg {
+    width: 75%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--form-gray);
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    left: 12%;
+}
+
+/* 進度條 進度 */
+.progress-line .line-bg .line {
+    width: 0%;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--green-light);
+}
+
+/* 標語 */
+.mark {
+    width: fit-content;
+    margin: auto auto 48px;
+}
+
+.mark p:first-child {
+    margin-bottom: 12px;
+}
+
+/* 表格 */
+form {
+    width: 40%;
+    min-width: 278px;
+    margin: auto;
+}
+
+#form-section1>div,
+#form-section2>div {
+    margin-bottom: 48px;
+}
+
+#form-section1>div {
+    margin-bottom: 38px;
+}
+
+#form-section1>div:last-of-type,
+#form-section2>div:last-of-type {
+    margin-bottom: 80px;
+}
+
+form input,
+form select,
+form option,
+form .addition textarea {
+    width: 100%;
+    border: solid thin var(--form-gray);
+    border-radius: 5px;
+    padding: 8px 16px;
+    /* 框框內文字字型 */
+    font-family: "gensen-L";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 170%;
+}
+
+
+/* form option {
+    background: var(--green-light);
+} */
+
+/* FOCUS狀態 */
+form input:focus,
+form .member select:focus,
+form .plan select:focus,
+form .addition textarea:focus {
+    outline: solid 2px var(--green-dark);
+    box-shadow: 0px 0px 0px 4px var(--green-light);
+}
+
+/* PLACEHOLDER */
+form input::placeholder,
+form .member select::placeholder,
+form .plan select::placeholder,
+form .addition textarea::placeholder {
+    color: var(--form-gray);
+}
+
+/* 空白警示 */
+form input.warning,
+form .radio-btn.warning,
+form .checkbox-btn.warning,
+form .addition textarea.warning {
+    border: solid thin transparent;
+    outline: solid 2px var(--red);
+}
+
+.null-warning,
+.format-warning {
+    margin-top: 8px;
+    color: var(--red);
+}
+
+form input.warning:focus,
+form .member select.warning:focus,
+form .plan select.warning:focus,
+form .addition textarea.warning:focus {
+    box-shadow: 0px 0px 0px 4px #bf3f3b8c;
+}
+
+form .email,
+form .tel {
+    position: relative;
+}
+
+form .email span,
+form .tel span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+
+form .email span img,
+form .tel span img {
+    width: 100%;
+}
+
+form input,
+form .member select,
+form .plan select {
+    height: 40px;
+}
+
+form .addition textarea {
+    height: 120px;
+}
+
+form input[type='radio'],
+form input[type='checkbox'] {
+    width: 12px;
+    /* display: none; */
+}
+
+form p {
+    margin-bottom: 8px;
+}
+
+/* CHECKBOX RADIO */
+form .gender p,
+form .contact p,
+form .issue p {
+    margin-bottom: 12px;
+}
+
+/* RADIO */
+form .gender label {
+    display: inline-block;
+    margin: 0 20px 10px 0;
+}
+
+/* CHECKBOX */
+form .contact label,
+form .issue label {
+    display: block;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+
+form .contact label:last-of-type {
+    margin-bottom: 0;
+}
+
+form .issue>div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form .issue>div label {
+    flex-basis: 50%;
+}
+
+/* TEXTAREA */
+form .addition p span {
+    float: right;
+    color: var(--word-40);
+}
+
+#form-finish {
+    width: 100%;
+    margin: auto;
+}
+
+#form-finish .finish {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#form-finish .finish .finish-icon {
+    width: 8.75rem;
+    height: 8.75rem;
+    text-align: center;
+}
+
+.finish .finish-icon img {
+    width: 100%;
+}
+
+#form-finish .finish .text h1 {
+    margin-bottom: 24px;
+}
+
+#form-finish>p {
+    width: 75%;
+    margin: auto;
+}
+
+/* radio checkbox 自訂樣式 */
+
+.radio-btn,
+.checkbox-btn {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: var(--white);
+    border: solid 2px var(--form-gray);
+    margin-right: 10px;
+}
+
+.radio-btn {
+    border-radius: 24px;
+    vertical-align: -6px;
+}
+
+.radio-btn.selected {
+    background: var(--green-main);
+    border: solid 2px var(--green-dark);
+}
+
+.radio-btn::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    background: var(--white);
+}
+
+.checkbox-btn {
+    border-radius: 4px;
+    vertical-align: -5px;
+}
+
+.checkbox-btn.selected {
+    background: var(--green-main);
+    border: solid 2px var(--green-dark);
+}
+
+.checkbox-btn::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 6px;
+    height: 10px;
+    border-radius: 2px;
+    border-bottom: solid 3px var(--white);
+    border-right: solid 3px var(--white);
+    transform: rotate(40deg);
+    z-index: 2;
+}
+
+/* 其他按鈕 */
+
+form a[class^='btn-'],
+form input.submit {
+    width: 50%;
+}
+
+form a.back {
+    float: right;
+    margin-top: 5%;
+    color: var(--word-40);
+}
+
+@media screen and (max-width: 1200px) {
+    form {
+        width: 55%;
+    }
+    .content-small {
+        background-size: auto 10%;
+    }
+
+}
+
+@media screen and (max-width: 990px) {
+
+    .content-small {
+        width: 67%;
+        background-size: auto 15%;
+    }
+
+    .progress-line {
+        width: 100%;
+
+    }
+
+    #form-finish .finish {
+
+        gap: 30px;
+    }
+
+    #form-finish>p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    form {
+        width: 65%;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .progress-line {
+        width: 100%;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    form a[class^='btn-'],
+    form input.submit {
+        width: 60%;
+    }
+
+
+
+    #form-finish .finish {
+        flex-direction: column;
+    }
+}

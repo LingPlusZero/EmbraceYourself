@@ -1,0 +1,573 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border: dashed thin red; */
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--word-title);
+    vertical-align: middle;
+    /* transition: all .4s; */
+}
+
+::selection {
+    background: var(--green-light);
+}
+
+/* 頁首 ----------------------------------------------- */
+#header {
+    width: 100%;
+    height: 80px;
+    border-radius: 0 0 50px 50px;
+    background: var(--white);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.07);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+#header>div {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-logo {
+    width: fit-content;
+    height: 100%;
+}
+
+#header-logo img {
+    height: 100%;
+}
+
+#navbar-sm {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+#navbar-sm div {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: var(--green-main);
+    transition: all .3s;
+    position: absolute;
+}
+
+#hanburger-top {
+    top: 0;
+}
+
+#hanburger-top.active {
+    top: 12.5px;
+    transform: rotate(45deg);
+}
+
+#hanburger-middle {
+    top: 12.5px;
+}
+
+#hanburger-middle.active {
+    opacity: 0;
+}
+
+#hanburger-bottom {
+    bottom: 0;
+}
+
+#hanburger-bottom.active {
+    bottom: 12.5px;
+    transform: rotate(-45deg);
+}
+
+
+#navbar {
+    padding: 25px 0;
+}
+
+#navbar a:not(a:last-of-type) {
+    display: inline-block;
+    margin-right: 50px;
+    text-align: center;
+    vertical-align: 50%;
+    color: var(--word-70);
+    height: 100%;
+}
+
+#navbar a.btn-primary:hover {
+    transform: translateY(-5px);
+}
+
+/* 麵包屑 ----------------------------------------------- */
+#breadcrumb {
+    padding-left: 18%;
+    text-align: left;
+}
+
+#breadcrumb>img {
+    vertical-align: 0px;
+    margin: 0 10px;
+}
+
+img[alt=home]:hover {
+    filter: brightness(120%);
+}
+
+#breadcrumb>a {
+    vertical-align: 2px;
+}
+
+#breadcrumb a:nth-of-type(2) {
+    vertical-align: 0px;
+}
+
+/* 至頂 ----------------------------------------------- */
+
+#toTop {
+    width: 3rem;
+    height: 3rem;
+    border: solid 2px var(--green-main);
+    border-radius: 50%;
+    background: var(--white);
+    position: fixed;
+    bottom: 45vh;
+    right: 5%;
+    z-index: 55;
+    overflow: hidden;
+    transition: all .4s;
+    opacity: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toTop img {
+    width: 50%;
+}
+
+#toTop.show {
+    opacity: 0.5;
+}
+
+#toTop.show:hover {
+    opacity: 1;
+}
+
+/* 頁尾 ----------------------------------------------- */
+#footer {
+    width: 100%;
+    height: auto;
+    background: var(--white);
+    color: var(--word-70);
+    padding-top: 50px;
+    border-top: solid thin rgba(0, 0, 0, 0.1);
+    vertical-align: bottom;
+}
+
+#footer div.wrap1 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    width: 90%;
+    margin: 0 auto 50px;
+}
+
+#footer div.wrap2 {
+    width: 73%;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 24px;
+}
+
+/* Logo */
+#footer-logo {
+    width: 300px;
+    text-align: center;
+}
+
+#footer-logo img {
+    width: 85%;
+}
+
+/* 聯絡方式+時間 */
+#footer-info,
+#footer-time {
+    height: 100%;
+}
+
+#footer-time {
+    text-align: right;
+}
+
+#footer-info span,
+#footer-time span {
+    margin-right: 40px;
+    float: left;
+}
+
+#footer-info p,
+#footer-time p {
+    margin-bottom: 8px;
+}
+
+#footer-info p:last-of-type,
+#footer-time p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/* icon */
+#footer-icon {
+    text-align: right;
+    align-self: center;
+}
+
+#footer-icon a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    transition: all .4s;
+}
+
+
+.line:hover rect {
+    fill: #06C755;
+}
+
+.fb:hover rect {
+    fill: #4267B2;
+}
+
+
+#footer-icon a:not(#footer-icon a:last-of-type) {
+    margin-right: 12px;
+}
+
+.ig {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.ig div {
+    width: 100%;
+    height: 100%;
+    background: var(--green-main);
+    padding: 9px;
+    opacity: 1;
+}
+
+.ig svg {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+}
+
+.line rect,
+.fb rect,
+.ig div {
+    transition: all .4s;
+}
+
+.ig:hover div {
+    opacity: 0;
+}
+
+#footer-icon a:hover {
+    transform: translateY(-10px);
+}
+
+/* 版權聲明 */
+#footer>p {
+    width: 100%;
+    line-height: 60px;
+    text-align: center;
+    background: var(--green-main);
+    color: var(--white);
+}
+
+/* 首頁以外頁面的標題區 ----------------------------------------------- */
+#banner-container {
+    height: auto;
+    padding: 120px 0 140px;
+    color: var(--word-80);
+    background: url('../img/banner.svg') no-repeat 0% 90%;
+    background-size: cover;
+}
+
+/* banner樣式1 */
+.banner-type1 {
+    width: fit-content;
+    margin: 70px auto 0;
+    position: relative;
+    text-align: center;
+}
+
+.banner-type1 h1 {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.banner-type1 p {
+    color: var(--word-60);
+    padding: 0 150px;
+}
+
+.banner-type1 h1,
+.banner-type1 p,
+.banner-type2 h1,
+.banner-type2 p {
+    /* 動態 */
+    opacity: 0;
+}
+
+.banner-type1 div {
+    position: absolute;
+}
+
+.banner-type1 .flower {
+    right: 40px;
+    top: calc(100% + 20px);
+}
+
+.banner-type1 .leaf {
+    bottom: 100%;
+    right: 0;
+}
+
+.banner-type1 .mountain {
+    top: 25%;
+    left: 0px;
+}
+
+.banner-type1 .mountain img {
+    transform: rotate(-6deg);
+}
+
+/* banner樣式2 */
+.banner-type2 {
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    margin: 70px auto 0;
+    color: var(--word-80);
+}
+
+.banner-type2 h1 {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 50px;
+}
+
+.banner-type2 p {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.banner-type2 .deco-set {
+    width: 110px;
+    height: 80px;
+    position: absolute;
+    top: -40px;
+    right: 150%;
+}
+
+.banner-type2 .deco-set:nth-of-type(2) {
+    transform: rotateY(180deg);
+    left: 150%;
+}
+
+.banner-type2 .deco-set .flower {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.banner-type2 .deco-set .leaf {
+    position: absolute;
+    left: -5px;
+    transform-origin: right top;
+    transform: rotate(-14deg);
+}
+
+/* banner樣式3 */
+.banner-type3 {
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    margin: 70px auto 0;
+}
+
+.banner-type3 h1 {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.banner-type3 p {
+    margin: 20px 0 0;
+    padding: 0 40px;
+    word-wrap: normal;
+    color: var(--word-60);
+}
+
+p.top-title {
+    width: fit-content;
+    margin: 0 auto 30px;
+    padding: initial;
+    position: relative;
+    color: var(--word-60);
+}
+
+p.top-title:after {
+    content: "";
+    position: absolute;
+    background: var(--word-60);
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    left: 0;
+    bottom: -10%;
+}
+
+.banner-type3 .leaf {
+    position: absolute;
+    top: 10%;
+    right: 95%;
+    transform-origin: right bottom;
+    transform: rotate(-28deg);
+}
+
+.banner-type3 .leaf:nth-of-type(2) {
+    transform: rotateY(180deg) rotate(-28deg);
+    right: 5%;
+}
+
+@media screen and (max-width: 1680px) {
+    #toTop {
+        right: 6%;
+    }
+
+
+    #navbar-sm {
+        display: block;
+        margin-right: 5%;
+    }
+
+    #navbar {
+        position: absolute;
+        padding: 25px 25px;
+        right: 5%;
+        top: 79px;
+        background: var(--white);
+        border-radius: 0 0 50px 50px;
+        border-top: solid 1px var(--white);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, .2);
+        display: none;
+        z-index: 2;
+    }
+
+    #navbar a:not(a:last-of-type) {
+        display: block;
+        line-height: 40px;
+        margin: 20px auto;
+        border-bottom: solid thin rgba(0, 0, 0, 0.1);
+    }
+
+    #navbar a:not(a:last-of-type):first-of-type {
+        margin: 0 auto 20px;
+    }
+
+    #footer div.wrap2 {
+        width: 90%;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #breadcrumb {
+        padding-left: 8%;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .banner-type1 p {
+        padding: 0 120px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .banner-type2 .deco-set {
+        right: 120%;
+    }
+
+    .banner-type2 .deco-set:nth-of-type(2) {
+        left: 120%;
+    }
+
+    .banner-type3 .leaf {
+        position: absolute;
+        bottom: 36%;
+        right: 95%;
+    }
+
+    .banner-type3 .leaf:nth-of-type(2) {
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 12px;
+    }
+
+    #breadcrumb {
+        padding: 0 8%;
+    }
+
+    .banner-type1 {
+        width: 100%;
+    }
+
+    .banner-type1 p {
+        padding: 0;
+    }
+
+    .banner-type1 .mountain {
+        top: 10%;
+    }
+
+    .banner-type2 .deco-set {
+        right: 110%;
+    }
+
+    .banner-type2 .deco-set:nth-of-type(2) {
+        left: 110%;
+    }
+
+}

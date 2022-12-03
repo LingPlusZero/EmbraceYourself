@@ -1,0 +1,314 @@
+/* 頁尾 ----------------------------------------------- */
+#footer {
+    border-top: 0;
+}
+
+/* 詳情頁的主要內容區 ----------------------------------------------- */
+#detail-content-container {
+    height: fit-content;
+    padding: 120px 0 180px;
+    color: var(--word-80);
+    background: var(--cream);
+}
+
+#detail-content {
+    width: 68%;
+    height: auto;
+    margin: 35px auto 120px;
+    padding: 90px 0 120px;
+    background: var(--white);
+    border-radius: 50px;
+    position: relative;
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.03);
+}
+
+.detail-content-range {
+    width: 79%;
+    margin: auto;
+    color: var(--word-80);
+}
+
+i {
+    font-style: normal;
+}
+
+/* 裝飾 ----------------------------------------------- */
+/* 最新消息詳情頁 */
+#detail-content .deco-type-leaf {
+    position: absolute;
+    right: 4%;
+    top: -10px;
+    transform-origin: right top;
+    transform: rotate(14deg);
+}
+
+/* 心衛文章詳情頁 */
+#detail-content .deco-type-mountain {
+    position: absolute;
+    right: 5%;
+    top: -20px;
+    transform-origin: center top;
+    transform: rotate(6deg);
+}
+
+/* 暖暖活動詳情頁 */
+#detail-content .deco-type-flower {
+    position: absolute;
+    right: 6%;
+    bottom: 98.5%;
+}
+
+#detail-content .deco-type-flower:last-of-type {
+    transform: scale(.7) rotateY(180deg);
+    bottom: 95%;
+    right: 3%;
+}
+
+/* 文字排版 ----------------------------------------------- */
+
+/* 最新消息 */
+
+.detail-content-range.news p:nth-of-type(1),
+.detail-content-range.news p.label-type1 {
+    display: inline-block;
+}
+
+.detail-content-range.news p.label-type1 {
+    margin-left: 16px;
+}
+
+.detail-content-range.news h2 {
+    margin: 24px 0 45px;
+}
+
+.detail-content-range.news .description {
+    list-style: none;
+    margin: 48px 0 48px;
+    color: var(--word-70);
+}
+
+.detail-content-range.news .description>h3 {
+    margin: 24px 0;
+}
+
+.detail-content-range.news .description>p {
+    margin-bottom: 12px;
+}
+
+.detail-content-range.news .description>li {
+    margin-bottom: 24px;
+}
+
+.description>li p:not(.description>li p:first-child) {
+    padding-left: 54px;
+}
+
+.detail-content-range.news .highlight {
+    color: var(--green-dark);
+}
+
+.detail-content-range .cover {
+    margin: 0 auto 48px;
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+    background: lightgray;
+    overflow: hidden;
+}
+
+.cover img {
+    width: 100%;
+}
+
+/* 活動 */
+.detail-content-range h2 {
+    margin: 24px 0;
+}
+
+.detail-content-range.activity p.label-type1 {
+    margin-bottom: 24px;
+}
+
+.detail-content-range.activity h3.add-bar {
+    margin-bottom: 48px;
+}
+
+.detail-content-range.activity ul {
+    margin: 0 0 100px;
+}
+
+.detail-content-range.activity ul li {
+    list-style: none;
+    margin: 0 0 24px;
+}
+
+.detail-content-range.activity ul li:last-of-type {
+    margin-bottom: 0px;
+}
+
+.detail-content-range.activity li p:not(li p:first-child) {
+    padding-left: 54px;
+}
+
+.activity>div p:not(p:last-of-type) {
+    margin-bottom: 12px;
+}
+
+/* 文章 */
+
+.detail-content-range.article p.label-type1 {
+    margin-bottom: 24px
+}
+
+.detail-content-range.article .author {
+    margin-bottom: 54px;
+}
+
+.detail-content-range.article>div p:not(p:last-of-type) {
+    margin-bottom: 36px;
+}
+
+
+/* 文章時間 ----------------------------------------------- */
+#article-time {
+    position: absolute;
+    color: var(--word-50);
+    bottom: 48px;
+    right: 10.5%;
+}
+
+/* 詳情頁下方按鈕區 ----------------------------------------------- */
+/* 三個按鈕 */
+#detail-content-btn {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#detail-content-btn a {
+    flex-basis: 270px;
+    position: relative;
+}
+
+/* 兩個按鈕 */
+#detail-content-btn.btn-type2 {
+    width: 50%;
+    justify-content: center;
+    column-gap: 14%;
+}
+
+/* 分享按鈕 ----------------------------------------------- */
+#share-btn {
+    position: absolute;
+    color: var(--word-50);
+    z-index: 99;
+    top: 91px;
+    right: 10.5%;
+}
+
+#share-btn a {
+    display: inline-block;
+    width: fit-content;
+    margin-left: 12px;
+}
+
+#share-btn .copy-button {
+    line-height: 18px;
+}
+
+#share-btn .copy-button:hover {
+    color: var(--word-80);
+}
+
+#share-btn .line-share-button:hover path {
+    fill: #06C755;
+    fill-opacity: 1;
+}
+
+
+#share-btn .fb-share-button {
+    vertical-align: 1px;
+}
+
+#share-btn .fb-share-button:hover path {
+    fill: #4267B2;
+    fill-opacity: 1;
+}
+
+.copy-button,
+.line-share-button,
+.fb-share-button {
+    position: relative;
+}
+
+/* 分享按鈕提示 */
+.tooltip {
+    width: 100px;
+    padding: 5px;
+    display: block;
+    position: absolute;
+    bottom: 130%;
+    left: calc(50% - 50px);
+    visibility: hidden;
+    background: var(--word-50);
+    color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tooltip::after {
+    content: "";
+    border: solid 5px;
+    border-color: var(--word-50) transparent transparent transparent;
+    position: absolute;
+    left: calc(50% - 5px);
+    top: 100%;
+}
+
+.copy-button:hover .tooltip,
+.fb-share-button:hover .tooltip,
+.line-share-button:hover .tooltip {
+    visibility: visible;
+}
+
+@media screen and (max-width: 990px) {
+    #detail-content {
+        width: 80%;
+    }
+
+    .detail-content-range {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #detail-content {
+        width: 90%;
+    }
+
+    #detail-content-btn {
+        width: 80%;
+    }
+
+    #detail-content-btn.btn-type2 {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #share-btn {
+        top: 91px;
+        right: 5%;
+    }
+
+    #detail-content-btn {
+        width: 60%;
+        gap: 20px;
+        flex-direction: column-reverse;
+    }
+
+    #detail-content-btn a {
+        flex-basis: 50px;
+    }
+}
