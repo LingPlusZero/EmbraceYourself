@@ -28,4 +28,5 @@ $(function () {
     for (i = 0; i < standardList.length; i++) {
         anchor.before(`<meta property="${standardList[i][0]}" content="${standardList[i][1]}">`);
     }
+    
 })
