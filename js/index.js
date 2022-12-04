@@ -1,5 +1,5 @@
 $(function () {
-    $('#key-vision').ready(function () {
+    $('*').ready(function () {
         $('.key-vision-deco.left').addClass('animate_slideleft');
         $('.key-vision-deco.right').addClass('animate_slideright');
         $('.key-vision-deco.left .key-vision-deco.right').css({ 'animation-delay': '0.4s' })
