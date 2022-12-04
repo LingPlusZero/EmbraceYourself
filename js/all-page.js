@@ -15,4 +15,9 @@ $(function () {
     // 取消按鈕
     $('a.disabled').removeAttr('href');
 
+    // 空連結防止滾動
+    $('a[href="#"]').click(function (event) {
+        event.preventDefault();
+        return false;
+    })
 })
