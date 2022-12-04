@@ -1,9 +1,11 @@
 $(function () {
-    $('.key-vision-deco.left').addClass('animate_slideleft');
-    $('.key-vision-deco.right').addClass('animate_slideright');
-    $('#key-vision p, #key-vision h1').addClass('animate_fade_none');
+    $('#key-vision').ready(function () {
+        $('.key-vision-deco.left').addClass('animate_slideleft');
+        $('.key-vision-deco.right').addClass('animate_slideright');
+        $('#key-vision p, #key-vision h1').addClass('animate_fade_none');
 
-    $('.key-vision-deco.left .key-vision-deco.right, #key-vision p, #key-vision h1').css({ 'animation-delay': '0.4s' })
+        $('.key-vision-deco.left .key-vision-deco.right, #key-vision p, #key-vision h1').css({ 'animation-delay': '0.4s' })
+    })
 
 
     // 翻牌效果
@@ -31,7 +33,7 @@ $(function () {
     // 滾動事件
 
     $(window).scroll(function () {
-        const showTiming = screen.height * 0.7;
+        const showTiming = screen.height * 0.8;
 
         // 關於我們
         var about = document.querySelector('.about');
