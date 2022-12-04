@@ -25,7 +25,7 @@ $(function () {
     }
 
     $(window).scroll(function () {
-        const showTiming = screen.height * 0.7;
+        const showTiming = screen.height * 0.8;
         // 頁面下方按鈕
         var twoBtn = document.querySelector('.content-btn');
         if (twoBtn) {
