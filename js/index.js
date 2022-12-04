@@ -2,9 +2,11 @@ $(function () {
     $('#key-vision').ready(function () {
         $('.key-vision-deco.left').addClass('animate_slideleft');
         $('.key-vision-deco.right').addClass('animate_slideright');
-        $('#key-vision p, #key-vision h1').addClass('animate_fade_none');
-
-        $('.key-vision-deco.left .key-vision-deco.right, #key-vision p, #key-vision h1').css({ 'animation-delay': '0.4s' })
+        $('.key-vision-deco.left .key-vision-deco.right').css({ 'animation-delay': '0.4s' })
+        setTimeout(function(){            
+            $('#key-vision p, #key-vision h1').addClass('animate_fade_none');
+        }, 600)
+        
     })
 
 
