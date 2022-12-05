@@ -22,7 +22,7 @@ $(function () {
     $('#form-section2, #form-finish').hide();
     $('.second').addClass('unfinished');
     $('.third').addClass('unfinished');
-    
+
     $('form a').click(function () {
         window.scrollTo(0, 50);
 
@@ -91,7 +91,7 @@ $(function () {
 
     // 檢查function
     function checkAllFilled() {
-        var 
+        var
             // text-like input
             name = $('#name'),
             birth = $('#birth'),
@@ -104,13 +104,13 @@ $(function () {
 
         // 第一頁檢查
         if ($('#form-section2').css('display') == 'none') {
-            
+
             // text-like input
             markTextNull([name, birth, tel, email]);
 
             // checkbox
             markCheckboxNull(contact, '.contact');
-            
+
             return [name, birth, tel, email].every(item => !item.hasClass('warning')) && contact.val() != null;
         }
 
@@ -131,11 +131,15 @@ $(function () {
         arr.forEach(item => {
             if (!item.val()) {
                 item.addClass('warning').siblings('.null-warning').show();
-            } else if((item == $('#email') || item == $('#tel') ) && item.hasClass('warning')){
-                item.siblings('.null-warning').hide();
             }
             else {
-                item.removeClass('warning').siblings('.null-warning').hide();
+                if (item.hasClass('warning') && item.siblings('.format-warning').css('display') == 'block') {
+                    item.siblings('.null-warning').hide();
+                }
+                else {
+                    item.removeClass('warning').siblings('.null-warning').hide();
+                }
+
             }
         });
     }
@@ -181,7 +185,7 @@ $(function () {
     $('#email').change(function () {
         var address = $(this).val();
         const format = /[^@\-\/\s]+@{1}.+\.{1}.+/gi;
-        
+
         if (!format.test(address)) {
             $(this).addClass('warning').siblings('p.format-warning').show().siblings('.email span').hide();
         } else {
