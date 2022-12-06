@@ -9,8 +9,11 @@ $(function () {
         $(this).addClass('active');
         var activeLabel = $(this).html();
 
+        // 保持動態一致   
+        $('.news, .photo-card').each(function () {
+            $(this).stop().animate({ 'opacity': '0' }).hide();
+        })
         // 導覽分類功能
-        
         if (activeLabel.indexOf('全部') < 0) {
             $('.news, .photo-card').each(function () {
                 if ($(this).find('.label-type1, .label-type2').html() == activeLabel) {
