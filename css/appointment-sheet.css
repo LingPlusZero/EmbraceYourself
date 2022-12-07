@@ -397,6 +397,9 @@ form a.back {
 }
 
 @media screen and (max-width: 768px) {
+    .content-small {
+        width: 75%;
+    }
 
     form {
         width: 65%;
@@ -405,12 +408,11 @@ form a.back {
 }
 
 @media screen and (max-width: 450px) {
+    .content-small {
+        width: 90%;
+    }
     .progress-line {
         width: 100%;
-    }
-
-    form {
-        width: 80%;
     }
 
     form a[class^='btn-'],

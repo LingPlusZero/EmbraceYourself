@@ -557,7 +557,9 @@ p.top-title:after {
     .banner-type1 p {
         padding: 0;
     }
-
+    .banner-type1 .leaf {
+        right: 5px;
+    }
     .banner-type1 .mountain {
         top: 10%;
     }

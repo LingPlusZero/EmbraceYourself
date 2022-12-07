@@ -98,7 +98,7 @@ h3.add-bar::before {
 /* 立即預約按鈕 */
 
 .appointment {
-    background: url('../img/homepage-appointment.jpg') center no-repeat;
+    background: url('../img/homepage-appointment.svg') center no-repeat;
     background-size: cover;
     width: 100%;
     height: 300px;
@@ -110,7 +110,7 @@ h3.add-bar::before {
     justify-content: center;
     align-items: center;
     row-gap: 32px;
-    /* 動態  */
+    /* 動態 */
     opacity: 0.3;
     transform: translateY(4vh);
 }
@@ -328,6 +328,12 @@ h3.add-bar::before {
 @media screen and (max-width: 600px) {
     .appointment h2 {
         padding: 5px;
+    }
+}
 
+@media screen and (max-width: 500px) {
+    .content-small,
+    .content-big {
+        width: 90%;
     }
 }
