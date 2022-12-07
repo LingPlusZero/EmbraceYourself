@@ -82,6 +82,7 @@ h3.add-bar::before {
 .label-type1,
 .label-type2 {
     width: fit-content;
+    min-width: fit-content;
     padding: 5px 20px 2.5px;
     border: solid 2px var(--green-dark);
     border-radius: 5px;
