@@ -458,25 +458,19 @@ h3.add-bar::before {
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 450px) {
     .key-vision-deco {
         left: 0%;
-        width: calc(250px * 0.8);
-        height: 80%;
-        background-size:auto 80%;
-        background-position: 3% bottom;
+        bottom: -10%;
+        height: 70%;
+        background-size:auto 70%;
+        background-position: 1% bottom;
     }
     .key-vision-deco:nth-of-type(2) {
-        width: calc(300px * 0.8);
-        background-position: 97% bottom;
+        background-size:auto 70%;
+        background-position: right bottom;
     }
-}
 
-@media screen and (max-width: 400px) {
-
-    .key-vision-wave {
-        bottom: -10px;
-    }
     .brick .arrow {
         width: 24px;
         height: 24px;
