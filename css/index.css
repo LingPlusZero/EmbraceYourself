@@ -341,11 +341,14 @@ a.word-button:hover {
     background: var(--green-main);
     text-align: center;
     justify-items: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.brick .arrow img {
+/* .brick .arrow img {
     vertical-align: text-bottom;
-}
+} */
 
 .brick:hover {
     background: var(--green-pale);
@@ -473,6 +476,10 @@ h3.add-bar::before {
 
     .key-vision-wave {
         bottom: -10px;
+    }
+    .brick .arrow {
+        width: 24px;
+        height: 24px;
     }
 
     #homepage-content-section1 {
