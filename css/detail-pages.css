@@ -147,7 +147,7 @@ i {
 }
 
 .detail-content-range.activity li p:not(li p:first-child) {
-    padding-left: 54px;
+    padding-left: 3.375rem;
 }
 
 .activity>div p:not(p:last-of-type) {
