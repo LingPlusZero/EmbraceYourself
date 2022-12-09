@@ -10,9 +10,11 @@ $(function () {
         var activeLabel = $(this).html();
 
         // 保持動態一致   
-        $('.news, .photo-card').each(function () {
+        $('.photo-card').each(function () {
             $(this).stop().animate({ 'opacity': '0' }).hide();
         })
+        //最後一個捕抓
+        $('.photo-card').last().stop().animate({ 'opacity': '0' }).hide();
         // 導覽分類功能
         if (activeLabel.indexOf('全部') < 0) {
             $('.news, .photo-card').each(function () {
