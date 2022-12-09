@@ -11,26 +11,26 @@ $(function () {
 
         // 保持動態一致   
         $('.news, .photo-card').each(function () {
-            $(this).stop().animate({ 'opacity': '0' }).hide();
+            $(this).stop().css({ 'opacity': '0' }).hide();
         })
-        //最後一個捕抓
-        $('.photo-card').last().stop().animate({ 'opacity': '0' }).hide();
         // 導覽分類功能
-        if (activeLabel.indexOf('全部') < 0) {
-            $('.news, .photo-card').each(function () {
-                if ($(this).find('.label-type1, .label-type2').html() == activeLabel) {
+        setTimeout(function () {
+            if (activeLabel.indexOf('全部') < 0) {
+
+                $('.news, .photo-card').each(function () {
+                    if ($(this).find('.label-type1, .label-type2').html() == activeLabel) {
+                        $(this).stop().show();
+                    } else {
+                        $(this).stop().hide();
+                    }
+                })
+
+            } else {
+                $('.news, .photo-card').each(function () {
                     $(this).stop().show();
-                } else {
-                    $(this).stop().hide();
-                }
-            })
-
-        } else {
-            $('.news, .photo-card').each(function () {
-                $(this).stop().show();
-            })
-        }
-
+                })
+            }
+        }, 0)
     })
 
     $('#content-nav a').get(0).click();
