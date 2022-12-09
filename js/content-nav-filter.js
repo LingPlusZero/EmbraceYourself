@@ -10,7 +10,7 @@ $(function () {
         var activeLabel = $(this).html();
 
         // 保持動態一致   
-        $('.photo-card').each(function () {
+        $('.news, .photo-card').each(function () {
             $(this).stop().animate({ 'opacity': '0' }).hide();
         })
         //最後一個捕抓
