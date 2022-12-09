@@ -8,7 +8,7 @@ $(function () {
     $('.banner-type1 p, .banner-type2 p').css({'animation-delay': '0.1s' })
 
     // 內容
-    $('#content-container, #content, #about-section1, #about-section2').addClass('animate_fade_none');
+    $('#content-container, #content, #about-section1, #about-section2, .news').addClass('animate_fade_none');
     $('#content-container, #about-section1, #about-section2').css({ 'animation-delay': '0.3s' })
     $('#content').css({ 'animation-delay': '0.4s' })
 
