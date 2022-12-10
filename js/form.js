@@ -50,7 +50,7 @@ $(function () {
             // 進度條
             $('.progress-line .line-bg .line').css('width', '0%');
             $('.second').removeClass('finished').addClass('unfinished')
-            $('.first').removeClass('unfinished');
+            $('.first').removeClass('finished');
         }
 
         // 第二頁
