@@ -65,6 +65,26 @@ i {
 }
 
 /* 文字排版 ----------------------------------------------- */
+.detail-content-range p.label-type1 {
+    margin-bottom: 24px
+}
+
+.detail-content-range h2 {
+    margin-top: 24px;
+}
+
+.detail-content-range .cover {
+    margin: 48px auto 48px;
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+    background: lightgray;
+    overflow: hidden;
+}
+
+.cover img {
+    width: 100%;
+}
 
 /* 最新消息 */
 
@@ -74,11 +94,7 @@ i {
 }
 
 .detail-content-range.news p.label-type1 {
-    margin-left: 16px;
-}
-
-.detail-content-range.news h2 {
-    margin: 24px 0 45px;
+    margin: 0px 0px 0px 16px;
 }
 
 .detail-content-range.news .description {
@@ -107,34 +123,15 @@ i {
     color: var(--green-dark);
 }
 
-.detail-content-range .cover {
-    margin: 0 auto 48px;
-    border-radius: 10px;
-    width: 100%;
-    height: fit-content;
-    background: lightgray;
-    overflow: hidden;
-}
-
-.cover img {
-    width: 100%;
-}
 
 /* 活動 */
-.detail-content-range h2 {
-    margin: 24px 0;
-}
 
-.detail-content-range.activity p.label-type1 {
+.detail-content-range.activity h3.add-bar {
     margin-bottom: 24px;
 }
 
-.detail-content-range.activity h3.add-bar {
-    margin-bottom: 48px;
-}
-
 .detail-content-range.activity ul {
-    margin: 0 0 100px;
+    margin: 0 0 80px;
 }
 
 .detail-content-range.activity ul li {
@@ -156,18 +153,13 @@ i {
 
 /* 文章 */
 
-.detail-content-range.article p.label-type1 {
-    margin-bottom: 24px
-}
-
 .detail-content-range.article .author {
-    margin-bottom: 54px;
+    margin: 24px 0 48px;
 }
 
 .detail-content-range.article>div p:not(p:last-of-type) {
     margin-bottom: 36px;
 }
-
 
 /* 文章時間 ----------------------------------------------- */
 #article-time {
