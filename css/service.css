@@ -11,6 +11,14 @@
     justify-content: center;
     color: var(--word-60);
     margin: 60px 0 80px;
+    position: relative;
+}
+
+.anchor {
+    position: absolute;
+    left: 0;
+    top: -150px;
+    opacity: 0;
 }
 
 #content .item:last-of-type {
