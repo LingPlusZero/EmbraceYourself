@@ -9,15 +9,26 @@ $(function () {
 
     // 翻牌效果
     // hover for pc
-    $('.circle').hover(
-        function () {
-            $(this).find('.circle-front').addClass('flip');
-            $(this).find('.circle-back').addClass('flip');
-        },
-        function () {
-            $(this).find('.circle-front').removeClass('flip');
-            $(this).find('.circle-back').removeClass('flip');
-        })
+    var hoverStatus = true;
+    console.log(screen.width)
+    if (screen.width <= 1280) {
+        hoverStatus = false;
+    } else {
+        hoverStatus = true;
+    }
+
+    if (hoverStatus) {
+        $('.circle').hover(
+            function () {
+                $(this).find('.circle-front').addClass('flip');
+                $(this).find('.circle-back').addClass('flip');
+            },
+            function () {
+                $(this).find('.circle-front').removeClass('flip');
+                $(this).find('.circle-back').removeClass('flip');
+            })
+    }
+
     // click for mobile devices
     $('.circle').click(function () {
         if ($(this).find('.circle-front').hasClass('flip') && $(this).find('.circle-back').hasClass('flip')) {
@@ -67,8 +78,8 @@ $(function () {
                 if (btnBig) {
                     btnBig.classList.add('animate_fade_light');
                     btnBig.style.animationDelay = '0.5s';
-                
-                // more 
+
+                    // more 
                 } else if (btnSmall && btnSmall.tagName == 'A') {
                     btnSmall.classList.add('animate_fade_light');
                     btnSmall.style.animationDelay = '0.5s';
@@ -79,7 +90,7 @@ $(function () {
 
                 if (btnBig) {
                     btnBig.classList.remove('animate_fade_light');
-                } else if(btnSmall && btnSmall.tagName == 'A') {
+                } else if (btnSmall && btnSmall.tagName == 'A') {
                     btnSmall.classList.remove('animate_fade_light');
                 }
 
