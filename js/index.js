@@ -3,7 +3,7 @@ $(function () {
         $('.key-vision-deco.left').addClass('animate_slideleft');
         $('.key-vision-deco.right').addClass('animate_slideright');
         $('.key-vision-deco.left .key-vision-deco.right').css({ 'animation-delay': '0.4s' });
-        $('#key-vision p, #key-vision h1').addClass('animate_fade_none').css({ 'animation-delay': '0.6s' });
+        $('#key-vision p, #key-vision h1').addClass('animate_fade_none').css({ 'animation-delay': '0.s' });
     })
 
 
